@@ -31,6 +31,7 @@
           int row = 10;
           int column;
           int totalCount=0;
+          int y;
 
           //nested while loops
           while ( row >= 1 ) 
@@ -38,9 +39,17 @@
              column = 1;
 
              //multiply this amount of loops time the previous loop
-             while ( column <= 5) 
+             while ( column <= 10) 
              {
+                
                 System.out.print( row % 2 == 1 ? "<" : ">" );
+                y= row*row;
+                totalCount += y;
+                if (totalCount >= 50){
+                    break;//stops at a cetain pooint
+                }
+                if(row%5 ==0)
+                    continue;// stop processing, skips, and continues the next block
                 ++totalCount;
                 ++column;
              } // end while
